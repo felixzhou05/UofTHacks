@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='SECERET-KEY')
 
 def getValues():
     c = open("responses.txt", "r")
