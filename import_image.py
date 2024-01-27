@@ -4,6 +4,8 @@ import cloudinary.api
 # Import the cloudinary.uploader for uploading assets
 import cloudinary.uploader
 
+import string
+
 cloudinary.config(
     cloud_name="devwy53sh",
     api_key="244389599412372",
@@ -12,5 +14,6 @@ cloudinary.config(
 )
 
 def uploadImage(name):
-  cloudinary.uploader.upload(name, public_id="image_of_the_moment", unique_filename = False, overwrite=True)
-  return cloudinary.CloudinaryImage("image_of_the_moment").build_url()
+  name1 = name.replace(".","")
+  cloudinary.uploader.upload(name, public_id=name1, unique_filename=True, overwrite=True)
+  return cloudinary.CloudinaryImage(name1).build_url()
