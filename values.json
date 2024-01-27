@@ -1,0 +1,9 @@
+{
+  "Danceability": 0.1,
+  "Energy": 0.3,
+  "Instrumentalness": 0.8,
+  "Liveness": 0.1,
+  "Loudness": 0.2,
+  "Tempo": 100,
+  "Valence": 0.3
+}
