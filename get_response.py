@@ -33,4 +33,4 @@ def storeGPT(name):
   f.write(response.choices[0].message.content)
   f.close()
 
-storeGPT("images/study.jpg")
+storeGPT("images/gym.jpg")
