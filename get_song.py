@@ -22,8 +22,8 @@ def find_recommendations(danceability, energy, instrumentalness, liveness, loudn
 
 
 recommendations = find_recommendations(0.9, 0.9, 0.4, 0.3, 0.8, 85, 0.5, set())
-song_links = []
+songs = []
 for track in recommendations['tracks']:
-    song_links.append(track['external_urls']['spotify'])
+    songs.append(track['external_urls']['spotify'])
 
-print(song_links)
+print(songs)
