@@ -32,5 +32,3 @@ def storeGPT(name):
   f = open("responses.txt", "w")
   f.write(response.choices[0].message.content)
   f.close()
-
-storeGPT("images/gym.jpg")

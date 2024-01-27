@@ -30,5 +30,3 @@ def getValues():
     f.write(response.choices[0].message.content)
     f.close()
 
-
-getValues()

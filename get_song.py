@@ -6,8 +6,7 @@ spotify = spotipy.Spotify(
                                                         client_secret="4ae9fa9feefe46568eb2d39dec9a4a8f"))
 
 
-def find_recommendations(danceability, energy, instrumentalness, liveness, loudness, tempo, valence,
-                         previous_recommendations, seed_genres=['pop', 'rap'], target_popularity=90, limit=5):
+def find_recommendations(danceability, energy, instrumentalness, liveness, loudness, tempo, valence, seed_genres=['pop', 'rap'], target_popularity=90, limit=5):
     recommendations = spotify.recommendations(seed_genres=seed_genres,
                                               target_danceability=danceability,
                                               target_energy=energy,
@@ -19,11 +18,3 @@ def find_recommendations(danceability, energy, instrumentalness, liveness, loudn
                                               target_popularity=target_popularity,
                                               limit=limit)
     return recommendations
-
-
-recommendations = find_recommendations(0.9, 0.9, 0.4, 0.3, 0.8, 85, 0.5, set())
-songs = []
-for track in recommendations['tracks']:
-    songs.append(track['external_urls']['spotify'])
-
-print(songs)
