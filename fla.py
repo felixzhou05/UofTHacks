@@ -71,11 +71,9 @@ def callback():
 
 @app.route('/playlists')
 def make_playlists():
-    print("valid")
     # Check if the access token is available and valid
     if 'access_token' not in session or 'expires_at' not in session or session['expires_at'] < datetime.now().timestamp():
         return redirect('/login')  # or handle token refresh
-    
 
     # Read song URLs from the .txt file
     with open('songs.txt', 'r') as file:
@@ -83,6 +81,10 @@ def make_playlists():
 
     # Extract track IDs from URLs
     track_ids = [url.split('/')[-1].strip() for url in song_urls]
+
+    # Empty the songs.txt file
+    with open('songs.txt', 'w') as file:
+        file.truncate(0)
 
     # Create a new playlist
     headers = {
@@ -106,6 +108,7 @@ def make_playlists():
 
     # Redirect or send a success response
     return redirect('/success')  # Replace with your success page
+
     
     
 @app.route('/refresh-token')
