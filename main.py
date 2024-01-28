@@ -16,4 +16,4 @@ def findSong(name):
         songs.append(track['external_urls']['spotify'])
     return songs
 
-print (findSong('images/study.jpg'))
+# print (findSong('images/swang.jpg'))

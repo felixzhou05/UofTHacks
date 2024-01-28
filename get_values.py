@@ -1,6 +1,6 @@
 from openai import OpenAI
 
-client = OpenAI(api_key='SECERET-KEY')
+client = OpenAI(api_key='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')
 
 def getValues():
     c = open("responses.txt", "r")
@@ -20,7 +20,7 @@ def getValues():
             Instrumentalness\
             Liveness\
             Loudness\
-            Tempo (ANSWER IN BEATS PER MINUTE, Ex. 140)\
+            Tempo (ANSWER IN BEATS PER MINUTE, (Min 60, Max 200))\
             Valence"},
       { "role": "user", "content": content}
     ]

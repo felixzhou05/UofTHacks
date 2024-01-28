@@ -6,7 +6,7 @@ spotify = spotipy.Spotify(
                                                         client_secret="4ae9fa9feefe46568eb2d39dec9a4a8f"))
 
 
-def find_recommendations(danceability, energy, instrumentalness, liveness, loudness, tempo, valence, seed_genres=['pop', 'rap'], target_popularity=90, limit=5):
+def find_recommendations(danceability, energy, instrumentalness, liveness, loudness, tempo, valence, seed_genres=['pop', 'rap', 'hardstyle'], target_popularity=90, limit=5):
     recommendations = spotify.recommendations(seed_genres=seed_genres,
                                               target_danceability=danceability,
                                               target_energy=energy,
