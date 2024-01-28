@@ -20,7 +20,7 @@ def getValues():
             Instrumentalness\
             Liveness\
             Loudness\
-            Tempo (ANSWER IN BEATS PER MINUTE, (Min 60, Max 200))\
+            Tempo (ANSWER IN BPM (Min 30, Max 200)) \
             Valence"},
       { "role": "user", "content": content}
     ]

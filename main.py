@@ -14,6 +14,7 @@ def findSong(name):
     songs = []
     for track in find_recommendations(data['Danceability'], data['Energy'], data['Instrumentalness'], data['Liveness'], data['Loudness'], data['Tempo'], data['Valence'])['tracks']:
         songs.append(track['external_urls']['spotify'])
+    
     return songs
 
 # print (findSong('images/swang.jpg'))
