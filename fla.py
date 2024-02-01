@@ -138,10 +138,10 @@ def make_playlists():
     # Add tracks to the playlist
     add_tracks_data = {'uris': [f'spotify:track:{track_id}' for track_id in track_ids]}
     requests.post(f"{api_base_url}playlists/{playlist_id}/tracks", headers=headers, json=add_tracks_data)
-
-    # Redirect or send a success response
-    return redirect('/success')  # Replace with your success page
-
+    
+    playlist_link = f"https://open.spotify.com/playlist/{playlist_id}"
+    
+    return  playlist_link
     
 @app.route('/refresh-token')
 def refresh_token():
@@ -157,7 +157,7 @@ def refresh_token():
     
     session['access_token'] = new_token_info['access_token']
     session['expires_at'] = datetime.now().timestamp() + new_token_info['expires_in']
-    return redirect('/login')
+    return redirect('/memberin')
 
 @app.route('/success')
 def end():
@@ -207,7 +207,7 @@ def make_moment_playlist():
     playlist_link = f"https://open.spotify.com/playlist/{playlist_id}"
     
     # Redirect or send a success response
-    return jsonify({'playlistId': playlist_link})
+    return playlist_link
 
 
 if __name__ == '__main__':
