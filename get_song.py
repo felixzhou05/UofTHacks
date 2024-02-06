@@ -4,8 +4,8 @@ import random
 import numpy as np
 
 spotify = spotipy.Spotify(
-    client_credentials_manager=SpotifyClientCredentials(client_id="3df409a8be3441319607bd8745d34c31",
-                                                        client_secret="4ae9fa9feefe46568eb2d39dec9a4a8f"))
+    client_credentials_manager=SpotifyClientCredentials(client_id="CLIENT-ID", #enter your client id
+                                                        client_secret="CLIENT-SECRET")) #enter your client secret
 
 
 def generate_biased_random_number():
