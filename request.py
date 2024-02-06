@@ -4,8 +4,8 @@ import base64
 from requests import post
 
 # Credentials you get from registering a new application
-client_id = '64f1524ada334d40a89ddf08b6a67a00'
-client_secret = '173ebf295352482490a7c037214b6171'
+client_id = 'CLIENT-ID' #enter your client-id
+client_secret = 'CLIENT-SECRET' #enter your client secret
 redirect_uri = 'https://localhost:3000/'
 
 
