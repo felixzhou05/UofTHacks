@@ -19,8 +19,8 @@ client_id = '64f1524ada334d40a89ddf08b6a67a00'
 client_secret = '173ebf295352482490a7c037214b6171'
 redirect_uri = 'http://localhost:5000/callback'
 
-SPOTIFY_CLIENT_ID = '64f1524ada334d40a89ddf08b6a67a00'
-SPOTIFY_CLIENT_SECRET = '173ebf295352482490a7c037214b6171'
+SPOTIFY_CLIENT_ID = 'CLIENT-ID' #enter your client id
+SPOTIFY_CLIENT_SECRET = 'CLIENT-SECRET' #enter your client secret
 SPOTIFY_REDIRECT_URI = 'http://localhost:5000/callback'
 SPOTIFY_AUTH_URL = 'https://accounts.spotify.com/authorize'
 SPOTIFY_TOKEN_URL = 'https://accounts.spotify.com/api/token'
