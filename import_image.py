@@ -8,8 +8,8 @@ import string
 
 cloudinary.config(
     cloud_name="devwy53sh",
-    api_key="244389599412372",
-    api_secret="da--HG37wTXmNog65BnEWtPa3Vc",
+    api_key="API-KEY", #enter your api key
+    api_secret="API-SECRET", #enter your api secret
     secure=True,
 )
 
