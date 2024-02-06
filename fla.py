@@ -15,8 +15,8 @@ app = Flask(__name__)
 CORS(app)
 app.secret_key = 'dasdio12909kpok'
 
-client_id = '64f1524ada334d40a89ddf08b6a67a00'
-client_secret = '173ebf295352482490a7c037214b6171'
+client_id = 'CLIENT-ID' #enter your client id
+client_secret = 'CLIENT-SECRET' #enter your client secret
 redirect_uri = 'http://localhost:5000/callback'
 
 SPOTIFY_CLIENT_ID = 'CLIENT-ID' #enter your client id
