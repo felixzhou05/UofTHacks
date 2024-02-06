@@ -1,7 +1,7 @@
 from openai import OpenAI
 from import_image import uploadImage
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='API-KEY') #enter your api key
 
 def storeGPT(name):
   url = uploadImage(name)
